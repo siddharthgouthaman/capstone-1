@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Online Ticket Booking</h1>
+  
+  <!-- Booking Form -->
+  <div id="booking-form">
+    <label for="ticket-type">Select Ticket Type:</label>
+    <select id="ticket-type">
+      <option value="bus">Bus</option>
+      <option value="railway">Railway</option>
+      <option value="movie">Movie</option>
+      <option value="temple">Temple</option>
+    </select>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date">
+
+    <label for="quantity">Number of Tickets:</label>
+    <input type="number" id="quantity" min="1" placeholder="Enter quantity">
+
+    <button onclick="bookTicket()">Book Now</button>
+  </div>
+
+  <!-- Confirmation Message -->
+  <div id="confirmation" style="display: none;">
+    <h2>Booking Confirmed!</h2>
+    <p id="ticket-details"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
